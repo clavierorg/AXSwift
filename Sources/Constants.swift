@@ -249,15 +249,15 @@ public enum Attribute: String {
     case textInputMarkedRange                   = "AXTextInputMarkedRange"
 
     // Parameterized text-specific attributes
-    case lineForIndexParameterized              = "AXLineForIndexParameterized" //(NSNumber *) - line# for char index; param:(NSNumber *)
-    case rangeForLineParameterized              = "AXRangeForLineParameterized" //(NSValue *)  - (rangeValue) range of line; param:(NSNumber *)
-    case stringForRangeParameterized            = "AXStringForRangeParameterized" //(NSString *) - substring; param:(NSValue * - rangeValue)
-    case rangeForPositionParameterized          = "AXRangeForPositionParameterized" //(NSValue *)  - (rangeValue) composed char range; param:(NSValue * - pointValue)
-    case rangeForIndexParameterized             = "AXRangeForIndexParameterized" //(NSValue *)  - (rangeValue) composed char range; param:(NSNumber *)
-    case boundsForRangeParameterized            = "AXBoundsForRangeParameterized" //(NSValue *)  - (rectValue) bounds of text; param:(NSValue * - rangeValue)
-    case rtfForRangeParameterized               = "AXRTFForRangeParameterized" //(NSData *)   - rtf for text; param:(NSValue * - rangeValue)
-    case styleRangeForIndexParameterized        = "AXStyleRangeForIndexParameterized" //(NSValue *)  - (rangeValue) extent of style run; param:(NSNumber *)
-    case attributedStringForRangeParameterized  = "AXAttributedStringForRangeParameterized" //(NSAttributedString *) - does _not_ use attributes from Appkit/AttributedString.h
+    case lineForIndexParameterized              = "AXLineForIndex" //(NSNumber *) - line# for char index; param:(NSNumber *)
+    case rangeForLineParameterized              = "AXRangeForLine" //(NSValue *)  - (rangeValue) range of line; param:(NSNumber *)
+    case stringForRangeParameterized            = "AXStringForRange" //(NSString *) - substring; param:(NSValue * - rangeValue)
+    case rangeForPositionParameterized          = "AXRangeForPosition" //(NSValue *)  - (rangeValue) composed char range; param:(NSValue * - pointValue)
+    case rangeForIndexParameterized             = "AXRangeForIndex" //(NSValue *)  - (rangeValue) composed char range; param:(NSNumber *)
+    case boundsForRangeParameterized            = "AXBoundsForRange" //(NSValue *)  - (rectValue) bounds of text; param:(NSValue * - rangeValue)
+    case rtfForRangeParameterized               = "AXRTFForRange" //(NSData *)   - rtf for text; param:(NSValue * - rangeValue)
+    case styleRangeForIndexParameterized        = "AXStyleRangeForIndex" //(NSValue *)  - (rangeValue) extent of style run; param:(NSNumber *)
+    case attributedStringForRangeParameterized  = "AXAttributedStringForRange" //(NSAttributedString *) - does _not_ use attributes from Appkit/AttributedString.h
 
     // Text attributed string attributes and constants
     case fontText                               = "AXFontText" //(NSDictionary *)  - NSAccessibilityFontXXXKey's
@@ -334,7 +334,7 @@ public enum Attribute: String {
     case columnHeaderUIElements                 = "AXColumnHeaderUIElements" //(NSArray *)  - UIElements for column headers
 
     // Cell-based table parameterized attributes.  The parameter for this attribute is an NSArray containing two NSNumbers, the first NSNumber specifies the column index, the second NSNumber specifies the row index.
-    case cellForColumnAndRowParameterized       = "AXCellForColumnAndRowParameterized" // (id) - UIElement for cell at specified row and column
+    case cellForColumnAndRowParameterized       = "AXCellForColumnAndRow" // (id) - UIElement for cell at specified row and column
 
     // Cell attributes.  The index range contains both the starting index, and the index span in a table.
     case rowIndexRange                          = "AXRowIndexRange" //(NSValue *)  - (rangeValue) location and row span
@@ -347,10 +347,10 @@ public enum Attribute: String {
     case verticalUnitDescription                = "AXVerticalUnitDescription" //(NSString *)
 
     // Layout area parameterized attributes
-    case layoutPointForScreenPointParameterized = "AXLayoutPointForScreenPointParameterized" //(NSValue *)  - (pointValue); param:(NSValue * - pointValue)
-    case layoutSizeForScreenSizeParameterized   = "AXLayoutSizeForScreenSizeParameterized" //(NSValue *)  - (sizeValue); param:(NSValue * - sizeValue)
-    case screenPointForLayoutPointParameterized = "AXScreenPointForLayoutPointParameterized" //(NSValue *)  - (pointValue); param:(NSValue * - pointValue)
-    case screenSizeForLayoutSizeParameterized   = "AXScreenSizeForLayoutSizeParameterized" //(NSValue *)  - (sizeValue); param:(NSValue * - sizeValue)
+    case layoutPointForScreenPointParameterized = "AXLayoutPointForScreenPoint" //(NSValue *)  - (pointValue); param:(NSValue * - pointValue)
+    case layoutSizeForScreenSizeParameterized   = "AXLayoutSizeForScreenSize" //(NSValue *)  - (sizeValue); param:(NSValue * - sizeValue)
+    case screenPointForLayoutPointParameterized = "AXScreenPointForLayoutPoint" //(NSValue *)  - (pointValue); param:(NSValue * - pointValue)
+    case screenSizeForLayoutSizeParameterized   = "AXScreenSizeForLayoutSize" //(NSValue *)  - (sizeValue); param:(NSValue * - sizeValue)
 
     // Layout item attributes
     case handles                                = "AXHandles" //(NSArray *)  - UIElements for handles
