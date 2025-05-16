@@ -401,7 +401,7 @@ open class UIElement {
     open func parameterizedAttribute<T, U>(_ attribute: String, param: U) throws -> T? {
         var value: AnyObject?
         let error = AXUIElementCopyParameterizedAttributeValue(
-            element, attribute as CFString, param as AnyObject, &value
+            element, attribute as CFString, packAXValue(param), &value
         )
 
         if error == .noValue || error == .attributeUnsupported {
