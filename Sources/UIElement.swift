@@ -648,6 +648,11 @@ extension UIElement: Equatable {}
 public func ==(lhs: UIElement, rhs: UIElement) -> Bool {
     return CFEqual(lhs.element, rhs.element)
 }
+extension UIElement: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(CFHash(self.element))
+    }
+}
 
 // MARK: - Convenience getters
 
